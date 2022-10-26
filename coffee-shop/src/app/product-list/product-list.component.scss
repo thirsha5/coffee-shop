@@ -1,0 +1,14 @@
+.products{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 100px 20px 20px 20px;
+}
+
+.content-alignment{
+    text-align: center;
+}
+
+.ngx-pagination .current {
+    background : #5a2011 !important;
+}

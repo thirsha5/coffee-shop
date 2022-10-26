@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div  class="products" >
+   <div *ngFor = "let product of products$ | paginate: { itemsPerPage: count, currentPage: page };  let i = index ">
+      <div class="card" style="width: 18rem; height: 30rem;" 
+         >
+         <img src="../../assets/coffee-details.jpg" class="card-img-top" alt="...">
+         <div class="card-body">
+            <p class="card-text"><b>Blend Name:</b> {{product.blend_name}}</p>
+            <p class="card-text"><b>Origin:</b> {{product.origin}}</p>
+            <p class="card-text"><b>Vareity:</b> {{product.variety}}</p>
+            <p class="card-text"><b>Notes:</b> {{product.notes}}</p>
+            <p class="card-text"><b>Intensifier:</b> {{product.intensifier}}</p>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="content-alignment">
+   <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
